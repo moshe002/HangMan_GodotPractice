@@ -13,9 +13,9 @@
 [ext_resource type="Texture2D" uid="uid://bia6ie533c5on" path="res://assets/torso.png" id="9_uvdty"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xe77x"]
-bg_color = Color(0.843137, 0.843137, 0.843137, 1)
-border_width_bottom = 2
-border_color = Color(0.294118, 0.294118, 0.294118, 1)
+bg_color = Color(0.858824, 0.858824, 0.858824, 0.862745)
+border_width_bottom = 3
+border_color = Color(0.180392, 0.180392, 0.180392, 1)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
