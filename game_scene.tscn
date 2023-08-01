@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cywm6kkksfbji"]
+[gd_scene load_steps=18 format=3 uid="uid://cywm6kkksfbji"]
 
 [ext_resource type="Texture2D" uid="uid://blmeh2mim8v2q" path="res://assets/input_box.png" id="1_j5q26"]
 [ext_resource type="Texture2D" uid="uid://cjsxdal3yjie2" path="res://assets/hang_platform.png" id="2_tdqyw"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dbqi62etohyhs" path="res://assets/left_leg.png" id="7_56ktb"]
 [ext_resource type="Texture2D" uid="uid://4si46vpue2hi" path="res://assets/right_leg.png" id="8_vwe6d"]
 [ext_resource type="Texture2D" uid="uid://bia6ie533c5on" path="res://assets/torso.png" id="9_uvdty"]
+[ext_resource type="Script" path="res://scripts/QuestionLabel.gd" id="12_1kk8y"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xe77x"]
 bg_color = Color(0.858824, 0.858824, 0.858824, 0.862745)
@@ -38,19 +39,23 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pcu32"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_bottom = 2
+border_color = Color(0.0745098, 0.0745098, 0.0745098, 1)
+
 [node name="GameScene" type="Node2D"]
 
 [node name="WhiteBackground" type="ColorRect" parent="."]
-offset_left = 2.0
-offset_right = 1151.0
-offset_bottom = 648.0
+offset_top = -1.0
+offset_right = 1152.0
+offset_bottom = 647.0
 
 [node name="RectDesignInput" type="TextureRect" parent="WhiteBackground"]
 layout_mode = 0
-offset_left = -5.0
-offset_top = 434.0
-offset_right = 1157.0
-offset_bottom = 655.0
+offset_top = 435.0
+offset_right = 1162.0
+offset_bottom = 656.0
 texture = ExtResource("1_j5q26")
 
 [node name="LineEdit" type="LineEdit" parent="WhiteBackground"]
@@ -69,11 +74,12 @@ caret_blink = true
 
 [node name="HangPlatform" type="TextureRect" parent="WhiteBackground"]
 layout_mode = 0
-offset_left = 297.0
-offset_top = -29.0
-offset_right = 688.0
-offset_bottom = 426.0
+offset_left = 418.0
+offset_top = 16.0
+offset_right = 619.0
+offset_bottom = 273.0
 texture = ExtResource("2_tdqyw")
+expand_mode = 1
 
 [node name="CheckButton" type="Button" parent="WhiteBackground"]
 layout_mode = 0
@@ -89,10 +95,10 @@ script = ExtResource("3_bajqr")
 
 [node name="ClearButton" type="Button" parent="WhiteBackground"]
 layout_mode = 0
-offset_left = 68.0
-offset_top = 554.0
-offset_right = 153.0
-offset_bottom = 599.0
+offset_left = 73.0
+offset_top = 552.0
+offset_right = 158.0
+offset_bottom = 597.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxFlat_6hty4")
@@ -101,10 +107,10 @@ script = ExtResource("3_iwk8a")
 
 [node name="SadHead" type="TextureRect" parent="WhiteBackground"]
 layout_mode = 0
-offset_left = 628.0
-offset_top = 144.0
-offset_right = 679.0
-offset_bottom = 194.0
+offset_left = 812.0
+offset_top = 42.0
+offset_right = 863.0
+offset_bottom = 92.0
 texture = ExtResource("3_tkqqk")
 expand_mode = 1
 
@@ -119,60 +125,93 @@ expand_mode = 1
 
 [node name="LeftArm" type="TextureRect" parent="WhiteBackground"]
 layout_mode = 0
-offset_left = 596.0
-offset_top = 206.0
-offset_right = 619.0
-offset_bottom = 322.0
+offset_left = 780.0
+offset_top = 104.0
+offset_right = 803.0
+offset_bottom = 220.0
 texture = ExtResource("5_28utr")
 expand_mode = 1
 
 [node name="RightArm" type="TextureRect" parent="WhiteBackground"]
 layout_mode = 0
-offset_left = 694.0
-offset_top = 205.0
-offset_right = 716.0
-offset_bottom = 320.0
+offset_left = 878.0
+offset_top = 103.0
+offset_right = 900.0
+offset_bottom = 218.0
 texture = ExtResource("6_1btuc")
 expand_mode = 1
 
 [node name="LeftLeg" type="TextureRect" parent="WhiteBackground"]
 layout_mode = 0
-offset_left = 627.0
-offset_top = 291.0
-offset_right = 658.0
-offset_bottom = 454.0
+offset_left = 811.0
+offset_top = 189.0
+offset_right = 842.0
+offset_bottom = 352.0
 texture = ExtResource("7_56ktb")
 expand_mode = 1
 
 [node name="RightLeg" type="TextureRect" parent="WhiteBackground"]
 layout_mode = 0
-offset_left = 666.0
-offset_top = 286.0
-offset_right = 697.0
-offset_bottom = 451.0
+offset_left = 850.0
+offset_top = 184.0
+offset_right = 881.0
+offset_bottom = 349.0
 texture = ExtResource("8_vwe6d")
 expand_mode = 1
 
 [node name="Torso" type="TextureRect" parent="WhiteBackground"]
 layout_mode = 0
-offset_left = 625.0
-offset_top = 191.0
-offset_right = 687.0
-offset_bottom = 300.0
+offset_left = 809.0
+offset_top = 89.0
+offset_right = 871.0
+offset_bottom = 198.0
 texture = ExtResource("9_uvdty")
 expand_mode = 1
 
-[node name="Label" type="Label" parent="WhiteBackground"]
+[node name="Question" type="Label" parent="WhiteBackground"]
 layout_mode = 0
-offset_left = 187.0
-offset_top = 465.0
-offset_right = 935.0
+offset_left = 558.0
+offset_top = 460.0
+offset_right = 1069.0
+offset_bottom = 531.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_pcu32")
+horizontal_alignment = 1
+vertical_alignment = 2
+script = ExtResource("12_1kk8y")
+
+[node name="Category" type="Label" parent="WhiteBackground"]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 466.0
+offset_right = 396.0
+offset_bottom = 531.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_pcu32")
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="CategoryLabel" type="Label" parent="WhiteBackground"]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 491.0
+offset_right = 207.0
 offset_bottom = 536.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
-text = "Bisaya dish with pork, bay leaves, pepper, & vinegar"
-horizontal_alignment = 1
-vertical_alignment = 1
+text = "Category:"
+
+[node name="QuestionLabel" type="Label" parent="WhiteBackground"]
+layout_mode = 0
+offset_left = 410.0
+offset_top = 491.0
+offset_right = 550.0
+offset_bottom = 536.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Question:"
 
 [connection signal="pressed" from="WhiteBackground/CheckButton" to="WhiteBackground/CheckButton" method="_on_pressed"]
 [connection signal="pressed" from="WhiteBackground/ClearButton" to="WhiteBackground/ClearButton" method="_on_pressed"]

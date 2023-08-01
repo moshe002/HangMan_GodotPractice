@@ -1,157 +1,207 @@
 [
-    {
-        "category": "Food",
-        "question": "Made with eggs, milk and sugar",
-        "answer": "Leche Flan"
-    },
-    {
-        "category": "Weather",
-        "question": "Destructive winds",
-        "answer": "Tornado"
-    }, 
-    {
-        "category": "Education",
-        "question": "Another term for tertiary education",
-        "answer": "College"
-    },
-    {
-        "category": "Science",
-        "question": "Smallest visible particle",
-        "answer": "Photon"
-    },
-    {
-        "category": "Science",
-        "question": "Is the sun a planet?",
-        "answer": "No"
-    },
-    {
-        "category": "Internet",
-        "question": "Famous app made in 2005",
-        "answer": "Youtube"
-    },
-    {
-        "category": "Streets",
-        "question": "Oldest Street in Cebu City",
-        "answer": "Colon Street"
-    },
-    {
-        "category": "Anime",
-        "question": "Anime that has the character Goku",
-        "answer": "Dragon Ball"
-    },
-    {
-        "category": "History",
-        "question": "Number of years the Spaniards colonized the Philippines",
-        "answer": "333 years"
-    },
-    {
-        "category": "Internet",
-        "question": "Most used social media app in the Philippines",
-        "answer": "Facebook"
-    },
-    {
-        "category": "Sport",
-        "question": "Most famous sport in the Philippines",
-        "answer": "Basketball"
-    },
-    {
-        "category": "Science",
-        "question": "Most important organ in the body",
-        "answer": "Brain"
-    },
-    {
-        "category": "Science",
-        "question": "Largest body of water",
-        "answer": "Ocean"
-    },
-    {
-        "category": "Superhero",
-        "question": "Who is Tony Stark?",
-        "answer": "Iron Man"
-    },
-    {
-        "category": "Countries",
-        "question": "Capital City of the Philippines",
-        "answer": "Manila"
-    },
-    {
-        "category": "Countries",
-        "question": "Capital City of America",
-        "answer": "Washington DC"
-    },
-    {
-        "category": "Animals",
-        "question": "Man's Bestfriend",
-        "answer": "Dog"
-    },
-    {
-        "category": "Animals",
-        "question": "Largest Reptile",
-        "answer": "Crocodile"
-    },
-    {
-        "category": "Movie",
-        "question": "Filipina singer who was in Mulan",
-        "answer": "Lea Salonga"
-    },
-    {
-        "category": "Movie",
-        "question": "Green ogre, friend of Donkey, husband of Fiona",
-        "answer": "Shrek"
-    },
-    {
-        "category": "Actors/Actresses",
-        "question": "Famous Chinese Actor who did his own stunts",
-        "answer": "Jackie Chan"
-    },
-    {
-        "category": "Internet",
-        "question": "Most famous search engine",
-        "answer": "Google"
-    },
-    {
-        "category": "Superhero",
-        "question": "What superhero group/team was Batman in",
-        "answer": "Justice League"
-    },
-    {
-        "category": "Cartoon",
-        "question": "Famous cartoon duo that hates each other",
-        "answer": "Tom and Jerry"
-    },
-    {
-        "category": "Sport",
-        "question": "Biggest sport event in the world",
-        "answer": "Olympics"
-    },
-    {
-        "category": "Math",
-        "question": "5 * 5 + (6 + 2) + (12 - (12 / 2))",
-        "answer": "39"
-    },
-    {
-        "category": "Movie",
-        "question": "Museum comes alive at night",
-        "answer": "Night at the Museum"
-    },
-    {
-        "category": "Movie",
-        "question": "Museum comes alive at night",
-        "answer": "Night at the Museum"
-    },
-    {
-        "category": "Movie",
-        "question": "Main actor in the movie Johnny English",
-        "answer": "Rowan Atkinson"
-    },
-    {
-        "category": "Internet",
-        "question": "Creator of Facebook",
-        "answer": "Mark Zuckerberg"
-    },
-    {
-        "category": "Sport",
-        "question": "Famous Boxer in the Philippines",
-        "answer": "Manny Pacquiao"
-    }
+	{
+		"category": "Food",
+		"question": "Made with eggs, milk and sugar",
+		"answer": "Leche Flan"
+	},
+	{
+		"category": "Weather",
+		"question": "Destructive winds",
+		"answer": "Tornado"
+	}, 
+	{
+		"category": "Education",
+		"question": "Another term for tertiary education",
+		"answer": "College"
+	},
+	{
+		"category": "Science",
+		"question": "Smallest visible particle",
+		"answer": "Photon"
+	},
+	{
+		"category": "Science",
+		"question": "Is the sun a planet?",
+		"answer": "No"
+	},
+	{
+		"category": "Internet",
+		"question": "Famous app made in 2005",
+		"answer": "Youtube"
+	},
+	{
+		"category": "Streets",
+		"question": "Oldest Street in Cebu City",
+		"answer": "Colon Street"
+	},
+	{
+		"category": "Anime",
+		"question": "Anime that has the character Goku",
+		"answer": "Dragon Ball"
+	},
+	{
+		"category": "History",
+		"question": "Number of years the Spaniards colonized the Philippines",
+		"answer": "333 years"
+	},
+	{
+		"category": "Internet",
+		"question": "Most used social media app in the Philippines",
+		"answer": "Facebook"
+	},
+	{
+		"category": "Sport",
+		"question": "Most famous sport in the Philippines",
+		"answer": "Basketball"
+	},
+	{
+		"category": "Science",
+		"question": "Most important organ in the body",
+		"answer": "Brain"
+	},
+	{
+		"category": "Science",
+		"question": "Largest body of water",
+		"answer": "Ocean"
+	},
+	{
+		"category": "Superhero",
+		"question": "Who is Tony Stark?",
+		"answer": "Iron Man"
+	},
+	{
+		"category": "Countries",
+		"question": "Capital City of the Philippines",
+		"answer": "Manila"
+	},
+	{
+		"category": "Countries",
+		"question": "Capital City of America",
+		"answer": "Washington DC"
+	},
+	{
+		"category": "Animals",
+		"question": "Man's Bestfriend",
+		"answer": "Dog"
+	},
+	{
+		"category": "Animals",
+		"question": "Largest Reptile",
+		"answer": "Crocodile"
+	},
+	{
+		"category": "Movie",
+		"question": "Filipina singer who was in Mulan",
+		"answer": "Lea Salonga"
+	},
+	{
+		"category": "Movie",
+		"question": "Green ogre, friend of Donkey, husband of Fiona",
+		"answer": "Shrek"
+	},
+	{
+		"category": "Actors/Actresses",
+		"question": "Famous Chinese Actor who did his own stunts",
+		"answer": "Jackie Chan"
+	},
+	{
+		"category": "Internet",
+		"question": "Most famous search engine",
+		"answer": "Google"
+	},
+	{
+		"category": "Superhero",
+		"question": "What superhero group/team was Batman in",
+		"answer": "Justice League"
+	},
+	{
+		"category": "Cartoon",
+		"question": "Famous cartoon duo that hates each other",
+		"answer": "Tom and Jerry"
+	},
+	{
+		"category": "Sport",
+		"question": "Biggest sport event in the world",
+		"answer": "Olympics"
+	},
+	{
+		"category": "Math",
+		"question": "5 * 5 + (6 + 2) + (12 - (12 / 2))",
+		"answer": "39"
+	},
+	{
+		"category": "Movie",
+		"question": "Museum comes alive at night",
+		"answer": "Night at the Museum"
+	},
+	{
+		"category": "Movie",
+		"question": "Museum comes alive at night",
+		"answer": "Night at the Museum"
+	},
+	{
+		"category": "Movie",
+		"question": "Main actor in the movie Johnny English",
+		"answer": "Rowan Atkinson"
+	},
+	{
+		"category": "Internet",
+		"question": "Creator of Facebook",
+		"answer": "Mark Zuckerberg"
+	},
+	{
+		"category": "Sport",
+		"question": "Famous Boxer in the Philippines",
+		"answer": "Manny Pacquiao"
+	},
+	{
+		"category": "Video Game",
+		"question": "His brother is Luigi",
+		"answer": "Mario"
+	},
+	{
+		"category": "Countries",
+		"question": "Capital City of Thailand",
+		"answer": "Bangkok"
+	},
+	{
+		"category": "Movie",
+		"question": "Main actor of I Am Legend",
+		"answer": "Will Smith"
+	},
+	{
+		"category": "Food",
+		"question": "Made with chicken, soy sauce and garlic",
+		"answer": "Chicken Adobo"
+	},
+	{
+		"category": "Science",
+		"question": "Smallest unit of matter",
+		"answer": "Atom"
+	},
+	{
+		"category": "Movie",
+		"question": "Disney princess that died eating an apple",
+		"answer": "Snow White"
+	},
+	{
+		"category": "Movie",
+		"question": "Kid raised by gorillas and monkeys",
+		"answer": "Tarzan"
+	},
+	{
+		"category": "Countries",
+		"question": "Capital City of Malaysia",
+		"answer": "Kuala Lumpur"
+	},
+	{
+		"category": "Language",
+		"question": "English translation of 'kumakain'",
+		"answer": "Eating"
+	},
+	{
+		"category": "Color",
+		"question": "Mixture of blue and yellow",
+		"answer": "Green"
+	}
 ]
