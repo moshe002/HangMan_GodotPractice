@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cywm6kkksfbji"]
+[gd_scene load_steps=17 format=3 uid="uid://cywm6kkksfbji"]
 
 [ext_resource type="Texture2D" uid="uid://blmeh2mim8v2q" path="res://assets/input_box.png" id="1_j5q26"]
 [ext_resource type="Texture2D" uid="uid://cjsxdal3yjie2" path="res://assets/hang_platform.png" id="2_tdqyw"]
@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://dbqi62etohyhs" path="res://assets/left_leg.png" id="7_56ktb"]
 [ext_resource type="Texture2D" uid="uid://4si46vpue2hi" path="res://assets/right_leg.png" id="8_vwe6d"]
 [ext_resource type="Texture2D" uid="uid://bia6ie533c5on" path="res://assets/torso.png" id="9_uvdty"]
-[ext_resource type="Script" path="res://scripts/QuestionLabel.gd" id="12_1kk8y"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xe77x"]
 bg_color = Color(0.858824, 0.858824, 0.858824, 0.862745)
@@ -179,7 +178,6 @@ theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_pcu32")
 horizontal_alignment = 1
 vertical_alignment = 2
-script = ExtResource("12_1kk8y")
 
 [node name="Category" type="Label" parent="WhiteBackground"]
 layout_mode = 0
