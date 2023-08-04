@@ -3,18 +3,47 @@ extends Button
 var content_as_dictionary
 var finalData
 var inputText
-var QuestionLabel 
-var CategoryLabel 
+var QuestionInput 
+var CategoryInput 
 var ResultLabel
+var CategoryLabel
+var QuestionLabel
+var clearButton
+var playAgainButton
+var YouLoseLabel
+var wrongTracker : int = 0 # i dinamically added its type which is an integer (murag typescript)
 #var delayTimer
+var torso
+var leftArm
+var rightArm
+var head
+var leftLeg
+var rightLeg
+var hangPlatform
+var newHangPlatform
 # gets the input text field node
 func _ready(): 
 	inputText = get_node("/root/GameScene/WhiteBackground/LineEdit")
-	QuestionLabel = get_node("/root/GameScene/WhiteBackground/Question")
-	CategoryLabel = get_node("/root/GameScene/WhiteBackground/Category")
-	ResultLabel = get_node("/root/GameScene/WhiteBackground/ResultLabel")	
-	#delayTimer = get_node("/root/GameScene/WhiteBackground/Timer")
+	QuestionInput = get_node("/root/GameScene/WhiteBackground/Question")
+	CategoryInput = get_node("/root/GameScene/WhiteBackground/Category")
+	ResultLabel = get_node("/root/GameScene/WhiteBackground/ResultLabel")
+	clearButton = get_node("/root/GameScene/WhiteBackground/ClearButton")
+	CategoryLabel = get_node("/root/GameScene/WhiteBackground/CategoryLabel")
+	QuestionLabel = get_node("/root/GameScene/WhiteBackground/QuestionLabel")
+	playAgainButton = get_node("/root/GameScene/WhiteBackground/PlayAgainButton")
+	YouLoseLabel = get_node("/root/GameScene/WhiteBackground/YouLoseLabel")
 	_get_data()
+	#delayTimer = get_node("/root/GameScene/WhiteBackground/Timer")
+	# the guy to be hanged
+	torso = get_node("/root/GameScene/WhiteBackground/Torso")
+	leftArm = get_node("/root/GameScene/WhiteBackground/LeftArm")
+	rightArm = get_node("/root/GameScene/WhiteBackground/RightArm")
+	head = get_node("/root/GameScene/WhiteBackground/SadHead")
+	leftLeg = get_node("/root/GameScene/WhiteBackground/LeftLeg")
+	rightLeg = get_node("/root/GameScene/WhiteBackground/RightLeg")
+	# hang platform
+	hangPlatform = get_node("/root/GameScene/WhiteBackground/HangPlatform")
+	newHangPlatform = get_node("/root/GameScene/WhiteBackground/NewHangPlatform")
 
 func _on_pressed():
 	if inputText != null: # checks if node exists
@@ -36,13 +65,30 @@ func _on_pressed():
 				# Color(1, 0, 0, 1) red
 				ResultLabel.text = "Wrong"
 				print("Wrong answer")
+				wrongTracker += 1
+				_check_wrongTracker(wrongTracker)
+				if wrongTracker == 6:
+					self.visible = false
+					clearButton.visible = false
+					QuestionInput.visible = false
+					CategoryInput.visible = false
+					inputText.visible = false
+					CategoryLabel.visible = false
+					QuestionLabel.visible = false
+					ResultLabel.visible = false
+					playAgainButton.visible = true
+					YouLoseLabel.visible = true
+					inputText.text = ""
+					wrongTracker = 0
+					_get_data()
+					# display play again button
+					# reset the game
 		else:
 			print("Empty field")
 			
 func _get_data():
 	# Create a file object.
 	var file = FileAccess.open("res://data/QuestionsAndAnswers.json", FileAccess.READ)
-	var categoryLabel = get_node("/root/GameScene/WhiteBackground/Category") # get the category label node
 	# Get the content of the file as a string.
 	var content_as_text = file.get_as_text()
 
@@ -54,9 +100,46 @@ func _get_data():
 	# content_as_dictionary[0].category, content_as_dictionary[0].question, content_as_dictionary[0].answer
 	finalData = content_as_dictionary[randi() % content_as_dictionary.size()] # this gets a random object in the array (JSON file)
 	# make it so that rare ra mo balik ang question kay so far magbalik2 siya frequently
-	QuestionLabel.text = finalData.question 
-	categoryLabel.text = finalData.category
+	QuestionInput.text = finalData.question 
+	CategoryInput.text = finalData.category
 	print(finalData)
 				
 func _on_timer_timeout(): # make it so that it will display for 2 seconds and not go away immediately
 	ResultLabel.visible = !true
+
+func _check_wrongTracker(wrongTracker: int):
+	if wrongTracker == 1:
+		#show torso
+		torso.visible = true
+	elif wrongTracker == 2:
+		# show torso and left arm
+		torso.visible = true
+		leftArm.visible = true
+	elif wrongTracker == 3:
+		# show torso, left arm and right arm
+		torso.visible = true
+		leftArm.visible = true
+		rightArm.visible = true
+	elif wrongTracker == 4:
+		# show torso, both arms, and head
+		hangPlatform.visible = false
+		newHangPlatform.visible = true
+		torso.visible = true
+		leftArm.visible = true
+		rightArm.visible = true
+		head.visible = true
+	elif wrongTracker == 5:
+		# show torso, both arms, head and left leg
+		torso.visible = true
+		leftArm.visible = true
+		rightArm.visible = true
+		head.visible = true
+		leftLeg.visible = true
+	elif wrongTracker == 6:
+		# show torso, both arms, head and both legs
+		torso.visible = true
+		leftArm.visible = true
+		rightArm.visible = true
+		head.visible = true
+		leftLeg.visible = true
+		rightLeg.visible = true

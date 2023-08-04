@@ -135,12 +135,7 @@
 		"answer": "Night at the Museum"
 	},
 	{
-		"category": "Movie",
-		"question": "Museum comes alive at night",
-		"answer": "Night at the Museum"
-	},
-	{
-		"category": "Movie",
+		"category": "Actors/Actresses",
 		"question": "Main actor in the movie Johnny English",
 		"answer": "Rowan Atkinson"
 	},
@@ -165,7 +160,7 @@
 		"answer": "Bangkok"
 	},
 	{
-		"category": "Movie",
+		"category": "Actors/Actresses",
 		"question": "Main actor of I Am Legend",
 		"answer": "Will Smith"
 	},
@@ -203,5 +198,110 @@
 		"category": "Color",
 		"question": "Mixture of blue and yellow",
 		"answer": "Green"
+	},
+	{
+		"category": "History",
+		"question": "A holiday every December 30",
+		"answer": "Rizal Day"
+	},
+	{
+		"category": "Countries",
+		"question": "Capital City of Australia",
+		"answer": "Canberra"
+	},
+	{
+		"category": "Countries",
+		"question": "Capital City of Canada",
+		"answer": "Ottawa"
+	},
+	{
+		"category": "Things",
+		"question": "You twist it to open",
+		"answer": "Doorknob"
+	},
+	{
+		"category": "Actors/Actresses",
+		"question": "Actor who played Mrs. Doubtfire",
+		"answer": "Robin Williams"
+	},
+	{
+		"category": "Science",
+		"question": "Liquid to Solid is called",
+		"answer": "Freezing"
+	},
+	{
+		"category": "Things",
+		"question": "Another term for automobile",
+		"answer": "Vehicle"
+	},
+	{
+		"category": "Actors/Actresses",
+		"question": "Main actor in the movie Cast Away",
+		"answer": "Tom Hanks"
+	},
+	{
+		"category": "Animals",
+		"question": "Felines are what animals?",
+		"answer": "Cats"
+	},
+	{
+		"category": "Things",
+		"question": "It reflects light",
+		"answer": "Mirror"
+	},
+	{
+		"category": "Technology",
+		"question": "AI means?",
+		"answer": "Artificial Intelligence"
+	},
+	{
+		"category": "Geography",
+		"question": "How many continents are there?",
+		"answer": "7"
+	},
+	{
+		"category": "Technology",
+		"question": "WiFi means?",
+		"answer": "Wireless Fidelity"
+	},
+	{
+		"category": "Geography",
+		"question": "Longest river in the world",
+		"answer": "Nile River"
+	},
+	{
+		"category": "Music",
+		"question": "What band was Freddie Mercury in?",
+		"answer": "Queen"
+	},
+	{
+		"category": "Science",
+		"question": "Study of plants",
+		"answer": "Botany"
+	},
+	{
+		"category": "Animals",
+		"question": "Most feared shark",
+		"answer": "Great White Shark"
+	},
+	{
+		"category": "Science",
+		"question": "Mineral to strengthen bones",
+		"answer": "Calcium"
+	},
+	{
+		"category": "Movie",
+		"question": "Robots that are cars",
+		"answer": "Transformers"
+	},
+	{
+		"category": "Movie",
+		"question": "Giant gorilla",
+		"answer": "King Kong"
+	},
+	{
+		"category": "Superhero",
+		"question": "He can grow big and grow small",
+		"answer": "Antman"	
 	}
 ]
