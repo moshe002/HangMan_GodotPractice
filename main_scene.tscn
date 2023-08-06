@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://cr1lbcvu01lh2"]
+[gd_scene load_steps=39 format=3 uid="uid://cr1lbcvu01lh2"]
 
 [ext_resource type="Script" path="res://scripts/QuitButton.gd" id="2_7s8ea"]
 [ext_resource type="Texture2D" uid="uid://c656blh502jr7" path="res://assets/play_animated/frame0000.png" id="2_u6uin"]
@@ -34,6 +34,8 @@
 [ext_resource type="Texture2D" uid="uid://bwrlylcmwfrig" path="res://assets/quit_animated/frame0010.png" id="32_4uyda"]
 [ext_resource type="Texture2D" uid="uid://xo0s7qbnepsl" path="res://assets/quit_animated/frame0011.png" id="33_23ral"]
 [ext_resource type="Texture2D" uid="uid://8y2i4v3j24h7" path="res://assets/quit_animated/frame0012.png" id="34_4bcfv"]
+[ext_resource type="AudioStream" uid="uid://bd7tbbg4ejvi7" path="res://assets/audio/titleScreenMusic.mp3" id="35_yft6c"]
+[ext_resource type="AudioStream" uid="uid://0uqhpifkkolw" path="res://assets/audio/onClickPlay.mp3" id="36_ksy7x"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1b644"]
 animations = [{
@@ -171,6 +173,13 @@ sprite_frames = SubResource("SpriteFrames_1b644")
 animation = &"play"
 autoplay = "play"
 
+[node name="OnClickAudio" type="AudioStreamPlayer" parent="PlayButton"]
+stream = ExtResource("36_ksy7x")
+volume_db = -5.0
+
+[node name="TimerDelay" type="Timer" parent="PlayButton"]
+one_shot = true
+
 [node name="QuitButton" type="Button" parent="."]
 offset_left = 388.0
 offset_top = 381.0
@@ -189,5 +198,11 @@ sprite_frames = SubResource("SpriteFrames_bcrdu")
 animation = &"quit"
 autoplay = "quit"
 
+[node name="IdleTitleScreenAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("35_yft6c")
+volume_db = -10.857
+autoplay = true
+
 [connection signal="pressed" from="PlayButton" to="PlayButton" method="_on_pressed"]
+[connection signal="timeout" from="PlayButton/TimerDelay" to="PlayButton" method="_on_timer_delay_timeout"]
 [connection signal="pressed" from="QuitButton" to="QuitButton" method="_on_pressed"]

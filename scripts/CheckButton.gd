@@ -21,6 +21,11 @@ var leftLeg
 var rightLeg
 var hangPlatform
 var newHangPlatform
+# audio
+var onclickAudio
+var isCorrect
+var isWrong
+var onDeath
 # gets the input text field node
 func _ready(): 
 	inputText = get_node("/root/GameScene/WhiteBackground/LineEdit")
@@ -44,14 +49,21 @@ func _ready():
 	# hang platform
 	hangPlatform = get_node("/root/GameScene/WhiteBackground/HangPlatform")
 	newHangPlatform = get_node("/root/GameScene/WhiteBackground/NewHangPlatform")
-
+	# audio
+	onclickAudio = get_node("/root/GameScene/OnClickAudio")
+	isCorrect = get_node("/root/GameScene/IsCorrect")
+	isWrong = get_node("/root/GameScene/IsWrong")
+	onDeath = get_node("/root/GameScene/OnDeath")
+	
 func _on_pressed():
+	onclickAudio.play()
 	if inputText != null: # checks if node exists
 		if inputText.text != "": # checks if node does have input
 			var userInput = inputText.text.to_lower() 
 			print("User entered: " + userInput)
 			var realAnswer = finalData.answer.to_lower()
 			if realAnswer == userInput: # IF ANSWER IS CORRECT
+				isCorrect.play()
 				print("Correct answer")
 				ResultLabel.visible = true 
 				ResultLabel.set("theme_override_colors/font_color", Color(0,1,0,1))
@@ -60,6 +72,7 @@ func _on_pressed():
 				inputText.text = ""
 				_get_data()
 			else: # IF ANSWER IS WRONG
+				isWrong.play()
 				ResultLabel.visible = true
 				ResultLabel.set("theme_override_colors/font_color", Color(1, 0, 0, 1))
 				# Color(1, 0, 0, 1) red
@@ -84,7 +97,9 @@ func _on_pressed():
 					# display play again button
 					# reset the game
 		else:
-			print("Empty field")
+			ResultLabel.visible = true
+			ResultLabel.set("theme_override_colors/font_color", Color(1, 0, 0, 1))
+			ResultLabel.text= "Empty field"
 			
 func _get_data():
 	# Create a file object.
@@ -143,3 +158,4 @@ func _check_wrongTracker(wrongTracker: int):
 		head.visible = true
 		leftLeg.visible = true
 		rightLeg.visible = true
+		onDeath.play()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cywm6kkksfbji"]
+[gd_scene load_steps=24 format=3 uid="uid://cywm6kkksfbji"]
 
 [ext_resource type="Texture2D" uid="uid://blmeh2mim8v2q" path="res://assets/input_box.png" id="1_j5q26"]
 [ext_resource type="Texture2D" uid="uid://cjsxdal3yjie2" path="res://assets/hang_platform.png" id="2_tdqyw"]
@@ -12,6 +12,11 @@
 [ext_resource type="Texture2D" uid="uid://bia6ie533c5on" path="res://assets/torso.png" id="9_uvdty"]
 [ext_resource type="Script" path="res://scripts/PlayAgainButton.gd" id="12_jseup"]
 [ext_resource type="Texture2D" uid="uid://c1vegjjij8fax" path="res://assets/new_hang_platform.png" id="13_hsi41"]
+[ext_resource type="AudioStream" uid="uid://dy03gvq3i54v3" path="res://assets/audio/idleOnGame.mp3" id="13_p6fla"]
+[ext_resource type="AudioStream" uid="uid://0uqhpifkkolw" path="res://assets/audio/onClickPlay.mp3" id="14_qpi0k"]
+[ext_resource type="AudioStream" uid="uid://8hcd6anymccs" path="res://assets/audio/correctAnswer.mp3" id="15_2vlqj"]
+[ext_resource type="AudioStream" uid="uid://bw8a5380bc5ed" path="res://assets/audio/wrongAnswer.mp3" id="16_g7j2d"]
+[ext_resource type="AudioStream" uid="uid://cbst4iaesewu1" path="res://assets/audio/onGuyDeath.mp3" id="17_sv7ga"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xe77x"]
 bg_color = Color(0.858824, 0.858824, 0.858824, 0.862745)
@@ -271,6 +276,27 @@ text = "the man died, you lost"
 horizontal_alignment = 1
 vertical_alignment = 2
 uppercase = true
+
+[node name="IdleGameAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_p6fla")
+volume_db = -15.0
+autoplay = true
+
+[node name="OnClickAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_qpi0k")
+volume_db = -20.0
+
+[node name="IsCorrect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_2vlqj")
+volume_db = -5.0
+
+[node name="IsWrong" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_g7j2d")
+volume_db = -5.0
+
+[node name="OnDeath" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("17_sv7ga")
+volume_db = 1.0
 
 [connection signal="pressed" from="WhiteBackground/CheckButton" to="WhiteBackground/CheckButton" method="_on_pressed"]
 [connection signal="pressed" from="WhiteBackground/ClearButton" to="WhiteBackground/ClearButton" method="_on_pressed"]
